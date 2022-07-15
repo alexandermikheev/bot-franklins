@@ -87,13 +87,14 @@ def func(message):
         bot.send_message(message.chat.id, text="В нашей компании открыты вакансии в следующих ТЦ:", reply_markup=markup)    
 
     elif(message.text == "Да-КАССИР"):
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) 
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)     
         btn1 = types.KeyboardButton("ТРЦ Город Лефортово")
         btn2 = types.KeyboardButton("ТРЦ Гагаринский")
         btn3 = types.KeyboardButton("ТРЦ Охотный Ряд")
         btn4 = types.KeyboardButton("ТРЦ Ривьера")
-        btn5 = types.KeyboardButton("Не подходит ни один вариант")
-        markup.add(btn1, btn2, btn3, btn4, btn5)
+        btn5 = types.KeyboardButton("ТРЦ Авиапарк")
+        btn6 = types.KeyboardButton("Не подходит ни один вариант")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
         bot.send_message(message.chat.id, text="В нашей компании открыты вакансии в следующих ТЦ:", reply_markup=markup)
 
     elif(message.text == "Да-Менеджер"):
